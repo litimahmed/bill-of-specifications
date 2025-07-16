@@ -23,7 +23,14 @@ To make the system work properly with the email PDF function, you need to set th
 REACT_APP_FIREBASE_FUNCTION_URL=https://sendemailwithpdf-v3cgkolbxa-uc.a.run.app
 ```
 
-Place this in a `.env.local` file in the root of the project.
+Place this in a `.env` file in the root of the project.
+
+Also, **be sure to update** the following files with your sender email and password on the commented lines:
+
+- `src/lib/index.js`
+- `functions/index.js`
+
+These are required for sending email estimates correctly.
 
 ---
 
