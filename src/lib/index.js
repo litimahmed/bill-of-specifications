@@ -14,7 +14,7 @@ exports.sendEmailWithPDF = functions.https.onRequest((req, res) => {
   const { formData, pdfBase64, recipient } = req.body;
 
   const mailOptions = {
-    from: "",
+    from: "", // Replace with your Gmail
     to: recipient,
     subject: "Marketplace Application Submission with PDF",
     text: `Marketplace Application Submission\n\n${formData}`,
