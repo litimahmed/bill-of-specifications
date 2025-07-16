@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "my-project-8935-1706806744865",
+    "? What alias do you want to use for this project? (e.g. staging)": "my-project-8935-1706806744865",
+    "staging": "my-project-8935-1706806744865",
+    "production": "my-project-8935-1706806744865"
+  },
+  "targets": {},
+  "etags": {}
+}
