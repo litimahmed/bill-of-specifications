@@ -45,6 +45,7 @@ To run and build the project locally:
 
 ```bash
 npm install
+npm run dev
 npm run build
 ```
 
