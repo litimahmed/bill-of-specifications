@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "litimahmed67@gmail.com",
+    user: "",
     pass: "enoj erct exqf ocfd",
   },
 });
@@ -28,7 +28,7 @@ exports.sendEmailWithPDF = functions.onRequest(
     }
 
     const mailOptions = {
-      from: "litimahmed67@gmail.com",
+      from: "",
       to: recipient,
       subject: "Marketplace Application Submission with PDF",
       text: `Marketplace Application Submission\n\n${formData}`,
