@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💾 Interactive Online Bill of Specifications
 
-## Getting Started
+An interactive web-based platform that allows stakeholders to **dynamically customize project requirements**. This system bridges the gap between clients and developers by providing a transparent, real-time interface for selecting, modifying, and estimating project components — all in one place.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Overview
+
+This project was built to simplify and streamline the project planning phase by:
+
+- Allowing users to **select and configure project specifications** in real time
+- Displaying **instant cost estimates** based on selected options
+- Sending detailed specifications and cost breakdowns via **email**
+- Making project planning more **transparent, collaborative, and interactive**
+
+---
+
+## ⚙️ Environment Variables
+
+To make the system work properly with the email PDF function, you need to set the following environment variable:
+
+```env
+REACT_APP_FIREBASE_FUNCTION_URL=https://sendemailwithpdf-v3cgkolbxa-uc.a.run.app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Place this in a `.env.local` file in the root of the project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Customizing the Requirements
 
-## Learn More
+If you'd like to change the default list of specifications (features, pricing, options, etc.), you can modify the logic in:
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/components/steps/*
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each step component (`step1.tsx`, `step2.tsx`, etc.) maps to a portion of the form. You can tweak them independently to fit your own project workflow or industry use case.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚡️ Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run and build the project locally:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run build
+```
+
+This will generate the `.out` folder (static output).
+
+You can then host the project using services like **Vercel** or **Netlify** by deploying the `.out` directory.
+
+---
+
+## 🤝 Contribution
+
+While I’m no longer actively maintaining this project, **contributions are welcome**.
+
+If you'd like to improve the code structure — such as implementing **separation of concerns**, adding architecture layers, or improving clarity — please feel free to **open a Pull Request (PR)**.
+
+Let’s keep it clean for anyone else who finds value in this tool.
+
+---
+
+## 📄 License
+
+[MIT License](./LICENSE) – free to use, modify, and distribute.
+
+---
+
+> _Thanks for checking it out! If it helps your workflow, even better._
